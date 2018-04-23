@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { MatgridComponent } from './matgrid/matgrid.component';
+import { ColformComponent } from './colform/colform.component';
 
 const appRoutes: Routes = [
   { path: 'test', component: TestComponent},
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
   {path: 'form', component: FormComponent},
   {path: 'grid', component: MatgridComponent},
   {path: 'login', component: LoginComponent},
+  {path:'colform',component:ColformComponent},
   {path:'',component: LandingComponent}];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     LoginComponent,
     FooterComponent,
     FormComponent,
-    MatgridComponent
+    MatgridComponent,
+    ColformComponent
   ],
   imports: [
     BrowserModule,
