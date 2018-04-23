@@ -16,12 +16,13 @@ import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
+import { MatgridComponent } from './matgrid/matgrid.component';
 
 const appRoutes: Routes = [
   { path: 'test', component: TestComponent},
   {path: 'nav', component: NavComponent},
   {path: 'form', component: FormComponent},
-  //{path: 'app', component: NewappComponent},
+  {path: 'grid', component: MatgridComponent},
   {path: 'login', component: LoginComponent},
   {path:'',component: LandingComponent}];
 
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     NewappComponent,
     LoginComponent,
     FooterComponent,
-    FormComponent
+    FormComponent,
+    MatgridComponent
   ],
   imports: [
     BrowserModule,

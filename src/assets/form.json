@@ -1,0 +1,12 @@
+[{
+  "element":"input",
+  "quantity":5,
+  "placeholder":"Enter Text"
+},
+  {
+    "element":"radio",
+    "quantity":5,
+    "placeholder":"Enter Text"
+  }
+
+]
