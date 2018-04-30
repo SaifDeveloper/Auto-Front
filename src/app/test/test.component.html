@@ -8,14 +8,23 @@
     <mat-card-content>
       <div class="form-container">
         <mat-form-field>
-          <input matInput placeholder="enter your name">
+          <input matInput placeholder="Enter your first name">
         </mat-form-field>
-        <label>Select an option</label>
-        <mat-radio-group class="example-radio-group">
-          <mat-radio-button class="example-radio-button" value="1">mobile</mat-radio-button>
-          <mat-radio-button class="example-radio-button" value="2">TV</mat-radio-button>
-          <mat-radio-button class="example-radio-button" value="3">computer</mat-radio-button>
-        </mat-radio-group>
+        <mat-form-field>
+          <input matInput placeholder="Enter your last name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Enter your email">
+        </mat-form-field>
+        <div>
+          <label>Select an option</label>
+          <br>
+          <mat-radio-group class="example-radio-group">
+            <mat-radio-button class="example-radio-button" value="1">mobile</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="2">TV</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="3">computer</mat-radio-button>
+          </mat-radio-group>
+        </div>
         <mat-form-field>
           <textarea matInput placeholder="Enter some text here">
           </textarea>
@@ -39,6 +48,7 @@
         <mat-slide-toggle>Slide Me</mat-slide-toggle>
         <button class="btn" mat-raised-button color="primary">Button 1</button>
         <button class="btn" mat-raised-button color="accent">Button 2</button>
+        <button class="btn" color="primary" mat-raised-button (click)="openDialog()">Dialog</button>
       </div>
 
     </mat-card-content>

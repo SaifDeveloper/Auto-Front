@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
@@ -18,6 +18,11 @@ import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { MatgridComponent } from './matgrid/matgrid.component';
 import { ColformComponent } from './colform/colform.component';
+import { DialogService } from './test/dialog.service';
+import { DialogOverviewComponent } from './test/dialog-overview.component';
+import { Test1Component } from './test1/test1.component';
+import { TestloginComponent } from './testcomponents/testlogin/testlogin.component';
+
 
 const appRoutes: Routes = [
   { path: 'test', component: TestComponent},
@@ -26,6 +31,8 @@ const appRoutes: Routes = [
   {path: 'grid', component: MatgridComponent},
   {path: 'login', component: LoginComponent},
   {path:'colform',component:ColformComponent},
+  {path:'test1',component:Test1Component},
+  {path:'testlogin',component:TestloginComponent},
   {path:'',component: LandingComponent}];
 
 @NgModule({
@@ -40,20 +47,29 @@ const appRoutes: Routes = [
     FooterComponent,
     FormComponent,
     MatgridComponent,
-    ColformComponent
+    ColformComponent,
+    DialogOverviewComponent,
+    Test1Component,
+    TestloginComponent,
+
   ],
+  entryComponents:[
+    DialogOverviewComponent
+  ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes
     ),
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,8 +11,8 @@ export class LandingComponent implements OnInit {
   cards=[];
 
   constructor(private httpService: HttpClient) {
-    var toggle = document.getElementsByClassName('navbar-toggler')[0],
-      collapse = document.getElementsByClassName('navbar-collapse')[0];
+    // var toggle = document.getElementsByClassName('navbar-toggler')[0],
+    //   collapse = document.getElementsByClassName('navbar-collapse')[0];
 
   }
 
